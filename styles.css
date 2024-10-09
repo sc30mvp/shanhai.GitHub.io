@@ -43,7 +43,7 @@ svg {
     color: rgb(134, 202, 86);
     background-color: rgb(247, 254, 241);
     padding: 1px 10px;
-    border-radius: 12px;
+    border-radius: 10px;
     font-size: 12px;
 }
 
@@ -73,7 +73,7 @@ svg {
 }
 
 .info {
-    color: #555;
+    color: #333;
 }
 
 .label {
