@@ -9,6 +9,7 @@ body {
     /* font-family: Arial, sans-serif;  */
     background-color: rgb(244, 244, 244);
     padding: 0 5px;
+    font-size: 12px;
 } 
 
 section {
@@ -43,7 +44,7 @@ svg {
     background-color: rgb(247, 254, 241);
     padding: 3px 10px;
     border-radius: 12px;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .content {
