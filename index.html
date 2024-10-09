@@ -4,47 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Simple HTML Template</title>
+    <title>预约记录</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Website</h1>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p>This is the home section of the website.</p>
-        </section>
-
-        <section id="about">
-            <h2>About</h2>
-            <p>This section is about the website.</p>
-        </section>
-
-        <section id="services">
-            <h2>Services</h2>
-            <p>Here are the services we offer.</p>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Get in touch with us through this section.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 My Website. All rights reserved.</p>
-    </footer>
+    <section>
+        <div class="title" id="title-box">
+            <div class="left-box info">
+                <span>2024-10-09 16:35:00预约详情</span>
+                <svg id="arrow-svg" t="1728468953412" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3377"><path d="M512 714.666667c-8.533333 0-17.066667-2.133333-23.466667-8.533334l-341.333333-341.333333c-12.8-12.8-12.8-32 0-44.8 12.8-12.8 32-12.8 44.8 0l320 317.866667 317.866667-320c12.8-12.8 32-12.8 44.8 0 12.8 12.8 12.8 32 0 44.8L533.333333 704c-4.266667 8.533333-12.8 10.666667-21.333333 10.666667z" fill="#666666" p-id="3378"></path></svg>
+            </div>
+            <span class="status">已通过</span>
+        </div>
+        <div class="content" id="content-box">
+            <div>
+                <span class="label">联<b></b>系<b></b>人：</span>
+                <span class="info">何超博</span>
+            </div>
+            <div>
+                <span class="label">联系方式：</span>
+                <span class="info">19302929023</span>
+            </div>
+            <div>
+                <span class="label">身份证号：</span>
+                <span class="info">61052819941209273X</span>
+            </div>
+            <div>
+                <span class="label">学员姓名：</span>
+                <span class="info"></span>
+            </div>
+            <div>
+                <span class="label">预约时间：</span>
+                <span class="info">2024-10-09 16:35:00</span>
+            </div>
+            <div>
+                <span class="label">预约凭证：</span>
+                <span class="info">吕凯兵参观</span>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
+
+<script>
+    const titleBox = document.querySelector('#title-box')
+    const contentBox = document.querySelector('#content-box')
+    const arrowSvg = document.querySelector('#arrow-svg')
+    titleBox.onclick = function () {
+        contentBox.classList.toggle('hidden')
+        arrowSvg.classList.toggle('rotate')
+    }
+</script>
