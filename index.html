@@ -8,15 +8,50 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <section>
-        <div class="title" id="title-box">
+    <section class="">
+        <div class="title title-box">
             <div class="left-box info">
-                <span>2024-10-09 16:35:00预约详情</span>
-                <svg id="arrow-svg" t="1728468953412" class="icon rotate" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3377"><path d="M512 714.666667c-8.533333 0-17.066667-2.133333-23.466667-8.533334l-341.333333-341.333333c-12.8-12.8-12.8-32 0-44.8 12.8-12.8 32-12.8 44.8 0l320 317.866667 317.866667-320c12.8-12.8 32-12.8 44.8 0 12.8 12.8 12.8 32 0 44.8L533.333333 704c-4.266667 8.533333-12.8 10.666667-21.333333 10.666667z" fill="#666666" p-id="3378"></path></svg>
+                <span>2024-10-10 11:20:00预约详情</span>
+                <svg t="1728468953412" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3377"><path d="M512 714.666667c-8.533333 0-17.066667-2.133333-23.466667-8.533334l-341.333333-341.333333c-12.8-12.8-12.8-32 0-44.8 12.8-12.8 32-12.8 44.8 0l320 317.866667 317.866667-320c12.8-12.8 32-12.8 44.8 0 12.8 12.8 12.8 32 0 44.8L533.333333 704c-4.266667 8.533333-12.8 10.666667-21.333333 10.666667z" fill="#666666" p-id="3378"></path></svg>
             </div>
             <span class="status">已通过</span>
         </div>
-        <div class="content" id="content-box">
+        <div class="content content-box">
+            <div>
+                <span class="label">联<b></b>系<b></b>人：</span>
+                <span class="info">何超博</span>
+            </div>
+            <div>
+                <span class="label">联系方式：</span>
+                <span class="info">19302929023</span>
+            </div>
+            <div>
+                <span class="label">身份证号：</span>
+                <span class="info">61052819941209273X</span>
+            </div>
+            <div>
+                <span class="label">学员姓名：</span>
+                <span class="info"></span>
+            </div>
+            <div>
+                <span class="label">预约时间：</span>
+                <span class="info">2024-10-10 11:20:00</span>
+            </div>
+            <div>
+                <span class="label">预约凭证：</span>
+                <span class="info">吕凯兵参观</span>
+            </div>
+        </div>
+    </section>
+    <section class="collapse-section">
+        <div class="title title-box">
+            <div class="left-box info">
+                <span>2024-10-09 16:35:00预约详情</span>
+                <svg t="1728468953412" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3377"><path d="M512 714.666667c-8.533333 0-17.066667-2.133333-23.466667-8.533334l-341.333333-341.333333c-12.8-12.8-12.8-32 0-44.8 12.8-12.8 32-12.8 44.8 0l320 317.866667 317.866667-320c12.8-12.8 32-12.8 44.8 0 12.8 12.8 12.8 32 0 44.8L533.333333 704c-4.266667 8.533333-12.8 10.666667-21.333333 10.666667z" fill="#666666" p-id="3378"></path></svg>
+            </div>
+            <span class="status">已通过</span>
+        </div>
+        <div class="content content-box">
             <div>
                 <span class="label">联<b></b>系<b></b>人：</span>
                 <span class="info">何超博</span>
@@ -47,11 +82,17 @@
 </html>
 
 <script>
-    const titleBox = document.querySelector('#title-box')
-    const contentBox = document.querySelector('#content-box')
-    const arrowSvg = document.querySelector('#arrow-svg')
-    titleBox.onclick = function () {
-        contentBox.classList.toggle('hidden')
-        arrowSvg.classList.toggle('rotate')
-    }
+    const titleBoxList = document.querySelectorAll('.title-box')
+    titleBoxList.forEach(element => {
+        element.onclick = function () {
+            if (element.parentElement.classList.contains('collapse-section')) {
+                titleBoxList.forEach(el => {
+                    el.parentElement.classList.add('collapse-section')
+                })
+                element.parentElement.classList.remove('collapse-section')
+            } else {
+                element.parentElement.classList.add('collapse-section')
+            }
+        }
+    })
 </script>

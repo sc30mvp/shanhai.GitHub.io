@@ -36,6 +36,7 @@ svg {
     width: 16px;
     height: 16px;
     margin-left: 5px;
+    transform: rotate(180deg);
 }
 
 .title .status {
@@ -80,10 +81,10 @@ svg {
     color: rgb(157, 157, 157);
 }
 
-.hidden {
+.collapse-section .content {
     display: none;
 }
 
-.rotate {
-    transform: rotate(180deg);
+.collapse-section svg {
+    transform: rotate(0);
 }
